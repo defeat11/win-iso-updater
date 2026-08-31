@@ -1,0 +1,28 @@
+# مخرجات العمل
+*.iso
+*.wim
+*.esd
+*.msu
+*.cab
+mount/
+temp/
+work/
+out/
+
+# سجلات
+*.log
+logs/
+
+# بايثون
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# إعدادات محلية
+config.local.json
+.env
+
+# أدوات داخلية
+.acp-*
+.acp-sessions/
