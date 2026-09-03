@@ -6,7 +6,7 @@
 
 A single Python script (682 lines, no dependencies beyond `requests`): it locates the install files, pulls the latest cumulative update from the Microsoft catalog, injects it into the image, and builds an ISO that boots on both UEFI and BIOS.
 
-Built after imaging more than 1,800 machines by hand — each one sat through hours of updates after setup.
+Built while re-imaging a fleet of 1,800 machines over 3 months — no central management, one machine at a time.
 
 ---
 
@@ -101,9 +101,13 @@ Every line is also written to a plain-text log file (`--log`).
 
 ## Why I built it
 
-I work as an IT supervisor. I have imaged more than 1,800 machines.
+I work as an IT supervisor. A fleet of 1,800 machines kept hitting the same problems, and there was no central management to fix them remotely. Re-imaging every one of them was the only way through.
 
-This was the slowest step in the process, so I automated it.
+It took 3 months. In every machine the slowest step was the same: Windows finishes installing, then hours of updates begin.
+
+So I built this tool to fold the updates into the image once. The machine now comes up current on its first boot.
+
+The fleet ended up enrolled in central management and clear of its old problems. After that I built zero-touch provisioning, so those three months never have to happen again.
 
 ---
 
